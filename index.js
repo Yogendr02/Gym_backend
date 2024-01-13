@@ -4,11 +4,8 @@ const fs = require("fs")
 const g = fs.readFileSync("info.json",'utf-8')
 const cors = require("cors")
 require("dotenv").config()
-var corsOptions = {
-    origin: 'https://timeforgym.vercel.app/',
-    optionsSuccessStatus: 200 // For legacy browser support
-}
-app.use(cors(corsOptions))
+
+app.use(cors())
 const mongoose = require("mongoose")
 const db = 'mongodb+srv://yoyo-Py-1:EvnIbpgDA4PgtuFf@cluster0.jp8f5w9.mongodb.net/?retryWrites=true&w=majority'
 
